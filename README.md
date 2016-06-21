@@ -48,6 +48,25 @@ A classe **Lentrada.java** implementa as seguintes funcoes abaixo:
 ```javascript
 
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.interf;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+/**
+ *
+ * @author ariane
+ */
 public class Lentrada  implements  Stream{
 
     private String stringEntreda =null; 
@@ -81,14 +100,17 @@ public class Lentrada  implements  Stream{
     
     /**
      * Funcao responsavel por ler a entrada da string digitada pelo usuario
+     * @param stringEntrada - String digitada pelo usuario
      */
-    public void leEntrada(){
+    public void leEntrada(String stringEntrada){
         
-        Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(System.in);
         
-        System.out.println("Digite a string de entrada : "  );
+        //System.out.println("Digite a string de entrada : "  );
         
-        stringEntreda = sc.next(); 
+        //stringEntreda = sc.next(); 
+        
+        stringEntreda = stringEntrada;
         
         indexMax = stringEntreda.length();
     }
@@ -111,7 +133,7 @@ public class Lentrada  implements  Stream{
             
             caractere = getNext();
             
-            System.out.println("Caractere: " +caractere);
+            //System.out.println("Caractere: " +caractere);
             
             quantidade = (Integer) mapCaractereQuantidade.get(String.valueOf(caractere)) ; 
             
@@ -129,7 +151,7 @@ public class Lentrada  implements  Stream{
         
         while(it.hasNext()){
             Map.Entry<String,Integer>  entry = it.next();
-            System.out.println( "Chave: "+entry.getKey() +" , Valor: "+entry.getValue() ) ;
+            //System.out.println( "Chave: "+entry.getKey() +" , Valor: "+entry.getValue() ) ;
             
             if ( entry.getValue() ==1 ){
                 caractereRetorno = entry.getKey().toCharArray()[0] ; 
@@ -145,6 +167,7 @@ public class Lentrada  implements  Stream{
 
     
 }
+
 
 
 ```
