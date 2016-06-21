@@ -29,7 +29,7 @@ caractere é retornado.
 
 
 
-A classe que efetua a leitura do arquivo digitado pelo usuario é chamada **Lentrada.java** . Ela estende a interface **Stream** 
+A classe que efetua a leitura da string digitada pelo usuario é chamada **Lentrada.java** . Ela estende a interface **Stream** 
 que oferece os metodos : 
 
 ```javascript
