@@ -6,6 +6,7 @@
 package com.mycompany.localizaprimeirocaractere;
 
 import com.mycompany.interf.Lentrada;
+import java.util.Scanner;
 
 /**
  * Classe principal entrada: aAbBABac 
@@ -15,10 +16,18 @@ public class LocalizaPrimeiroCaractere {
     
     public static void main(String args[]){
         
+        
         Lentrada entrada = new Lentrada();
         char caractereRetorno=' ';
+
+        Scanner sc = new Scanner(System.in);
         
-        entrada.leEntrada();
+        System.out.println("Digite a string de entrada : "  );
+        
+        String stringEntrada = sc.next(); 
+
+        
+        entrada.leEntrada(stringEntrada);
         
         caractereRetorno = entrada.firstChar();
         
