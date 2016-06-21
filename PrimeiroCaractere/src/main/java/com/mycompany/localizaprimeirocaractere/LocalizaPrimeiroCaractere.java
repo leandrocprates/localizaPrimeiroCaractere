@@ -22,7 +22,11 @@ public class LocalizaPrimeiroCaractere {
         
         caractereRetorno = entrada.firstChar();
         
-        System.out.println("O caractere [" + caractereRetorno +"] é o primeiro caractre que aparece e nao se repete. ");
+        if ( caractereRetorno != ' ' ){
+            System.out.println("O caractere [" + caractereRetorno +"] é o primeiro caractre que aparece e nao se repete. ");
+        } else {
+            System.out.println("Nao existe nenhum caractere que aparece somente uma vez no texto digitado.");
+        }
         
     }
     

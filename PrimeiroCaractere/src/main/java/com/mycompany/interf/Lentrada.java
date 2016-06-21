@@ -26,12 +26,19 @@ public class Lentrada  implements  Stream{
     //indice maximo onde termina a leitura
     private int indexMax=0;
     
-    
+    /**
+     * Funcao responsavel por retornar o proximo caractere
+     * @return 
+     */
     @Override
     public char getNext() {
         return stringEntreda.charAt(indexMin++);
     }
 
+    /**
+     * Funcao responsavel por indicar se ha ainda caracteres para leitura
+     * @return 
+     */
     @Override
     public boolean hasNext() {
         if (indexMin < indexMax ){
@@ -40,6 +47,10 @@ public class Lentrada  implements  Stream{
         return false;
     }
 
+    
+    /**
+     * Funcao responsavel por ler a entrada da string digitada pelo usuario
+     */
     public void leEntrada(){
         
         Scanner sc = new Scanner(System.in);
@@ -51,6 +62,11 @@ public class Lentrada  implements  Stream{
         indexMax = stringEntreda.length();
     }
     
+    
+    /**
+     * Funcao responsavel por retornar o caractere que aparece somente uma vez na string
+     * @return 
+     */
     public char firstChar(){
     
         LinkedHashMap mapCaractereQuantidade = new LinkedHashMap<String,Integer>();
